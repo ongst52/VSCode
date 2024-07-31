@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="01_sidebar-leftTop.css">
+    <link rel="stylesheet" href="02_sidebar-leftBottom.css">
+    <link rel="stylesheet" href="03_sidebar-rightTop.css">
+    <link rel="stylesheet" href="04_sidebar-rightBottom.css">
+    <link rel="stylesheet" href="05_searchBar.css">
+    <link rel="stylesheet" href="06_center.css">
+    <link rel="stylesheet" href="06.5_footer.css">
+    <link rel="stylesheet" href="07_toolBar.css">
+    <link rel="stylesheet" href="08_mediaquery.css">
+    <!--폰트-->
+    <link rel="stylesheet" href="00_fonts.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b9007bff14.js" crossorigin="anonymous"></script>
+    <!--
+    뒷배경: #171717 
+    앞배경: #121212
+    앞배경 테두리 : #363636
+    포인트: #FFE495
+    반강조 : #cacaca
+    비강조: #adadad
+    -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Noto Sans KR", sans-serif;
+        }
+        body {
+            position:relative;
+        }
+        html, body {
+            background: #171717;
+            width: 100%;
+            height: 100%;
+            padding-top:5px;
+        }
+        a {
+            text-decoration: none;
+            color: white;
+        }
+        ul {
+            list-style: none;
+        }
+        button {
+            cursor:pointer;
+            border: none;
+            background-color: transparent;
+        }
+        #wrapper {
+            display: grid;
+            grid-template-columns: 350px 5.5fr 450px;
+            grid-template-rows: 130px auto 90px;
+            position:relative;
+            width: 99.5%;
+            height: 100%;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="sidebar-leftTop">
+            <ul>
+                <li>
+                    <a href="#"><img src="/Media/Images/Project/logo/gori-gold.png" width="100px"></img></a>
+                </li>
+                <li>
+                    <button type="button">버튼1</button>
+                    <button type="button">버튼2</button>
+                    <button type="button">버튼3</button>
+                </li>
+            </ul>
+        </div>
+        <div id="sidebar-leftBottom">
+            <div id="library-top">
+                <div>
+                    <button type="button"><i class="icon fa-solid fa-list"></i>내 라이브러리</button>
+                    <button type="button"><i class="icon fa-solid fa-plus"></i></button>
+                </div>
+                <div>
+                    <button id="btn-playlist" onclick="">플레이리스트</button>
+                    <button id="btn-artist" onclick="">아티스트</button>
+                    <button id="btn-album" onclick="">앨범</button>
+                </div>
+                <div>
+                    <button id="btn-libSearch" onclick=""><i class="icon fa-solid fa-magnifying-glass"></i></button>
+                    <button id="btn-libSort" onclick=""><i class="icon fa-solid fa-arrow-down-wide-short"></i></button>
+                </div>
+            </div>
+            <div id="library-bottom">
+                <div id="library-bottom-list">
+                    <div class="library-content playlist-like">
+                        <div><i class="fa-solid fa-heart"></i></div>
+                        <div>
+                            <p>좋아요 표시한 곡</p>
+                            <span>플레이리스트</span>
+                        </div>
+                    </div>
+                    <div class="library-content artist">
+                        <div><img src="/Media/Images/Project/Artist/newjeans.jpg"></div>
+                        <div>
+                            <p>NewJeans</p>
+                            <span>아티스트</span>
+                        </div>
+                    </div>
+                    <div class="library-content album">
+                        <div><img src="/Media/Images/Project/Album/cool_best.jpg"></div>
+                        <div>
+                            <p>Cool Best</p>
+                            <span>앨범</span>
+                        </div>
+                    </div>
+                    <div class="library-content playlist">
+                        <div><i class="fa-solid fa-music"></i></div>
+                        <div>
+                            <p>내 플레이리스트#1</p>
+                            <span>플레이리스트</span>
+                        </div>
+                    </div>
+                    <div class="library-content playlist">
+                        <div><i class="fa-solid fa-music"></i></div>
+                        <div>
+                            <p>내 플레이리스트#1</p>
+                            <span>플레이리스트</span>
+                        </div>
+                    </div>
+                    <div class="library-content playlist">
+                        <div><i class="fa-solid fa-music"></i></div>
+                        <div>
+                            <p>내 플레이리스트#1</p>
+                            <span>플레이리스트</span>
+                        </div>
+                    </div>
+                    <div class="library-content playlist">
+                        <div><i class="fa-solid fa-music"></i></div>
+                        <div>
+                            <p>내 플레이리스트#1</p>
+                            <span>플레이리스트</span>
+                        </div>
+                    </div>
+                    <div class="library-content playlist">
+                        <div><i class="fa-solid fa-music"></i></div>
+                        <div>
+                            <p>내 플레이리스트#1</p>
+                            <span>플레이리스트</span>
+                        </div>
+                    </div>
+
+                </div>  
+            </div>
+        </div>
+        <div id="sidebar-rightTop">
+            <a href="/Project/02/b_login.html"><button type="button" id="btn-login">로그인하기</button></a>
+            <span>계정이 없으신가요?<a href="#">가입하기</a></span>
+        </div>
+        <div id="sidebar-rightBottom">
+            <div id="feed-header">
+                <a href="#">피드</a>
+                <button type="button" onclick="">최신</button>
+                <button type="button" onclick="">인기</button>
+                <button type="button" onclick=""></button>
+            </div>
+            <div id="feed_contentBox">
+                <div class="feed_content">
+                    <div class="feed_content_song">
+                        <div class="feed_content_song_info">
+                            <div>
+                                <a href="#"><img src="/Media/Images/Project/Song/NewJeans/NewJeans_HowSweet_HowSweet.jfif"></a>
+                            </div>
+                            <div>
+                                <a href="#"><p>How Sweet</p></a>
+                                <a href="#"><span>NewJeans</span></a>
+                            </div>
+                        </div>
+                        <div class="feed_content_song_button">
+                            <button type="button" onclick=""><i class="fa-regular fa-heart"></i></button>
+                            <button type="button" onclick=""><i class="fa-solid fa-plus"></i></button>
+                            <button type="button" onclick=""><i class="fa-solid fa-circle-play"></i></button>
+                        </div>
+                    </div>
+                    <div class="timeline">
+                        <span>0:00</span>
+                        <div></div>
+                        <span>4:18</span>
+                    </div>
+                    <div class="feed_content_message">
+                        <div class="feed_content_message_profile">
+                            <div>
+                                <a href="#"><img src="/Media/Images/Project/logo/profile_blank.png"></a>
+                                <span>최대 12자</span>
+                                <button type="button" onclick=""><i class="fa-solid fa-plus"></i></button>
+                                <button type="button" onclick=""><i class="fa-solid fa-comment"></i></button>
+                            </div>
+                        </div>
+                        <div class="feed_content_message_text">
+                            <div>
+                                아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="feed_content">
+                    <div class="feed_content_song">
+                        <div class="feed_content_song_info">
+                            <div>
+                                <a href="#"><img src="/Media/Images/Project/Song/NewJeans/NewJeans_HowSweet_HowSweet.jfif"></a>
+                            </div>
+                            <div>
+                                <a href="#"><p>How Sweet</p></a>
+                                <a href="#"><span>NewJeans</span></a>
+                            </div>
+                        </div>
+                        <div class="feed_content_song_button">
+                            <button type="button" onclick=""><i class="fa-regular fa-heart"></i></button>
+                            <button type="button" onclick=""><i class="fa-solid fa-plus"></i></button>
+                            <button type="button" onclick=""><i class="fa-solid fa-circle-play"></i></button>
+                        </div>
+                    </div>
+                    <div class="timeline">
+                        <span>0:00</span>
+                        <div></div>
+                        <span>4:18</span>
+                    </div>
+                    <div class="feed_content_message">
+                        <div class="feed_content_message_profile">
+                            <div>
+                                <a href="#"><img src="/Media/Images/Project/logo/profile_blank.png"></a>
+                                <span>최대 12자</span>
+                                <button type="button" onclick=""><i class="fa-solid fa-plus"></i></button>
+                                <button type="button" onclick=""><i class="fa-solid fa-comment"></i></button>
+                            </div>
+                        </div>
+                        <div class="feed_content_message_text">
+                            <div>
+                                아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="feed_content">
+                    <div class="feed_content_song">
+                        <div class="feed_content_song_info">
+                            <div>
+                                <a href="#"><img src="/Media/Images/Project/Song/NewJeans/NewJeans_HowSweet_HowSweet.jfif"></a>
+                            </div>
+                            <div>
+                                <a href="#"><p>How Sweet</p></a>
+                                <a href="#"><span>NewJeans</span></a>
+                            </div>
+                        </div>
+                        <div class="feed_content_song_button">
+                            <button type="button" onclick=""><i class="fa-regular fa-heart"></i></button>
+                            <button type="button" onclick=""><i class="fa-solid fa-plus"></i></button>
+                            <button type="button" onclick=""><i class="fa-solid fa-circle-play"></i></button>
+                        </div>
+                    </div>
+                    <div class="timeline">
+                        <span>0:00</span>
+                        <div></div>
+                        <span>4:18</span>
+                    </div>
+                    <div class="feed_content_message">
+                        <div class="feed_content_message_profile">
+                            <div>
+                                <a href="#"><img src="/Media/Images/Project/logo/profile_blank.png"></a>
+                                <span>최대 12자</span>
+                                <button type="button" onclick=""><i class="fa-solid fa-plus"></i></button>
+                                <button type="button" onclick=""><i class="fa-solid fa-comment"></i></button>
+                            </div>
+                        </div>
+                        <div class="feed_content_message_text">
+                            <div>
+                                아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="feed_content">
+                    <div class="feed_content_song">
+                        <div class="feed_content_song_info">
+                            <div>
+                                <a href="#"><img src="/Media/Images/Project/Song/NewJeans/NewJeans_HowSweet_HowSweet.jfif"></a>
+                            </div>
+                            <div>
+                                <a href="#"><p>How Sweet</p></a>
+                                <a href="#"><span>NewJeans</span></a>
+                            </div>
+                        </div>
+                        <div class="feed_content_song_button">
+                            <button type="button" onclick=""><i class="fa-regular fa-heart"></i></button>
+                            <button type="button" onclick=""><i class="fa-solid fa-plus"></i></button>
+                            <button type="button" onclick=""><i class="fa-solid fa-circle-play"></i></button>
+                        </div>
+                    </div>
+                    <div class="timeline">
+                        <span>0:00</span>
+                        <div></div>
+                        <span>4:18</span>
+                    </div>
+                    <div class="feed_content_message">
+                        <div class="feed_content_message_profile">
+                            <div>
+                                <a href="#"><img src="/Media/Images/Project/logo/profile_blank.png"></a>
+                                <span>최대 12자</span>
+                                <button type="button" onclick=""><i class="fa-solid fa-plus"></i></button>
+                                <button type="button" onclick=""><i class="fa-solid fa-comment"></i></button>
+                            </div>
+                        </div>
+                        <div class="feed_content_message_text">
+                            <div>
+                                아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="searchBar">
+            <div>
+                <button type="button" id="search_Button">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <span>검색하기</span>
+                </button>
+            </div>
+            <div>
+                <button type="button" onclick="">뒤</button>
+                <button type="button" onclick="">앞</button>
+            </div>
+        </div>
+        <div id="center">
+            <div id="center_header">
+                <p>최근 재생한 항목</p>
+                <div id="center_header_contentBox">
+                    <div class="artist mouseover_btn_play" >
+                        <img src="/Media/Images/Project/Artist/queen.jpg">
+                        <span>Queen</span>
+                        <button type="button" class="btn_play" onclick=""><i class="fa-solid fa-circle-play"></i></button>
+                    </div>
+                    <div class="album mouseover_btn_play">
+                        <img src="/Media/Images/Project/Album/cool_best.jpg">
+                        <span>Cool Best</span>
+                        <button type="button" class="btn_play" onclick=""><i class="fa-solid fa-circle-play"></i></button>
+                    </div>
+                    <div class="playlist mouseover_btn_play">
+                        <img src="/Media/Images/Project/Artist/newjeans.jpg">
+                        <span>승택의 플레이리스트 1</span>
+                        <button type="button" class="btn_play" onclick=""><i class="fa-solid fa-circle-play"></i></button>
+                    </div>
+                    <div class="mix mouseover_btn_play">
+                        <img src="/Media/Images/Project/Mix/daily3.jfif">
+                        <span>데일리 믹스3</span>
+                        <button type="button" class="btn_play" onclick=""><i class="fa-solid fa-circle-play"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div id="center-content">
+                <div class="content-container">
+                    <div class="container-name">
+                        <a href="#">오승택님을 위한 믹스 & 추천</a>
+                    </div>
+                    <div class="container-line">
+                        <div class="content-box mouseover_btn_play">
+                            <div>
+                                <img src="/Media/Images/Project/Mix/daily1.jfif">
+                                <button type="button" class="btn_play" onclick=""><i class="fa-solid fa-circle-play"></i></button>
+                            </div>
+                            <div>
+                                <p>데일리 믹스1</p>
+                                <span>쿨,god,Incredivle 등</span>
+                            </div>
+                        </div>
+                        <div class="content-box mouseover_btn_play">
+                            <div>
+                                <img src="/Media/Images/Project/Mix/daily2.jfif">
+                                <button type="button" class="btn_play" onclick=""><i class="fa-solid fa-circle-play"></i></button>
+                            </div>
+                            <div>
+                                <p>데일리 믹스2</p>
+                                <span>이석훈,앤씨아,조성모 등</span>
+                            </div>
+                        </div>
+                        <div class="content-box mouseover_btn_play">
+                            <div>
+                                <img src="/Media/Images/Project/Mix/daily3.jfif">
+                                <button type="button" class="btn_play" onclick=""><i class="fa-solid fa-circle-play"></i></button>
+                            </div>
+                            <div>
+                                <p>데일리 믹스3</p>
+                                <span>유재하,이문세,김광석 등</span>
+                            </div>
+                        </div>
+                        <div class="content-box mouseover_btn_play">
+                            <div>
+                                <img src="/Media/Images/Project/Mix/daily4.jfif">
+                                <button type="button" class="btn_play" onclick=""><i class="fa-solid fa-circle-play"></i></button>
+                            </div>
+                            <div>
+                                <p>데일리 믹스4</p>
+                                <span>Mose 및 M4</span>
+                            </div>
+                        </div>
+                        <div class="content-box mouseover_btn_play">
+                            <div>
+                                <img src="/Media/Images/Project/Mix/daily5.jfif">
+                                <button type="button" class="btn_play" onclick=""><i class="fa-solid fa-circle-play"></i></button>
+                            </div>
+                            <div>
+                                <p>데일리 믹스5</p>
+                                <span>DPR LIVE,Miso,Virgin Miri 등</span>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!--container-->
+                <div class="content-container">
+                    <div class="container-name">
+                        <a href="#">오승택님을 위한 믹스 & 추천</a>
+                    </div>
+                    <div class="container-line">
+                        <div class="content-box mouseover_btn_play">
+                            <div>
+                                <img src="/Media/Images/Project/Mix/daily1.jfif">
+                                <button type="button" class="btn_play" onclick=""><i class="fa-solid fa-circle-play"></i></button>
+                            </div>
+                            <div>
+                                <p>데일리 믹스1</p>
+                                <span>쿨,god,Incredivle 등</span>
+                            </div>
+                        </div>
+                        <div class="content-box mouseover_btn_play">
+                            <div>
+                                <img src="/Media/Images/Project/Mix/daily2.jfif">
+                                <button type="button" class="btn_play" onclick=""><i class="fa-solid fa-circle-play"></i></button>
+                            </div>
+                            <div>
+                                <p>데일리 믹스2</p>
+                                <span>이석훈,앤씨아,조성모 등</span>
+                            </div>
+                        </div>
+                        <div class="content-box mouseover_btn_play">
+                            <div>
+                                <img src="/Media/Images/Project/Mix/daily3.jfif">
+                                <button type="button" class="btn_play" onclick=""><i class="fa-solid fa-circle-play"></i></button>
+                            </div>
+                            <div>
+                                <p>데일리 믹스3</p>
+                                <span>유재하,이문세,김광석 등</span>
+                            </div>
+                        </div>
+                        <div class="content-box mouseover_btn_play">
+                            <div>
+                                <img src="/Media/Images/Project/Mix/daily4.jfif">
+                                <button type="button" class="btn_play" onclick=""><i class="fa-solid fa-circle-play"></i></button>
+                            </div>
+                            <div>
+                                <p>데일리 믹스4</p>
+                                <span>Mose 및 M4</span>
+                            </div>
+                        </div>
+                        <div class="content-box mouseover_btn_play">
+                            <div>
+                                <img src="/Media/Images/Project/Mix/daily5.jfif">
+                                <button type="button" class="btn_play" onclick=""><i class="fa-solid fa-circle-play"></i></button>
+                            </div>
+                            <div>
+                                <p>데일리 믹스5</p>
+                                <span>DPR LIVE,Miso,Virgin Miri 등</span>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!--container-->
+                <div class="content-container">
+                    <div class="container-name">
+                        <a href="#">오승택님을 위한 믹스 & 추천</a>
+                    </div>
+                    <div class="container-line">
+                        <div class="content-box mouseover_btn_play">
+                            <div>
+                                <img src="/Media/Images/Project/Mix/daily1.jfif">
+                                <button type="button" class="btn_play" onclick=""><i class="fa-solid fa-circle-play"></i></button>
+                            </div>
+                            <div>
+                                <p>데일리 믹스1</p>
+                                <span>쿨,god,Incredivle 등</span>
+                            </div>
+                        </div>
+                        <div class="content-box mouseover_btn_play">
+                            <div>
+                                <img src="/Media/Images/Project/Mix/daily2.jfif">
+                                <button type="button" class="btn_play" onclick=""><i class="fa-solid fa-circle-play"></i></button>
+                            </div>
+                            <div>
+                                <p>데일리 믹스2</p>
+                                <span>이석훈,앤씨아,조성모 등</span>
+                            </div>
+                        </div>
+                        <div class="content-box mouseover_btn_play">
+                            <div>
+                                <img src="/Media/Images/Project/Mix/daily3.jfif">
+                                <button type="button" class="btn_play" onclick=""><i class="fa-solid fa-circle-play"></i></button>
+                            </div>
+                            <div>
+                                <p>데일리 믹스3</p>
+                                <span>유재하,이문세,김광석 등</span>
+                            </div>
+                        </div>
+                        <div class="content-box mouseover_btn_play">
+                            <div>
+                                <img src="/Media/Images/Project/Mix/daily4.jfif">
+                                <button type="button" class="btn_play" onclick=""><i class="fa-solid fa-circle-play"></i></button>
+                            </div>
+                            <div>
+                                <p>데일리 믹스4</p>
+                                <span>Mose 및 M4</span>
+                            </div>
+                        </div>
+                        <div class="content-box mouseover_btn_play">
+                            <div>
+                                <img src="/Media/Images/Project/Mix/daily5.jfif">
+                                <button type="button" class="btn_play" onclick=""><i class="fa-solid fa-circle-play"></i></button>
+                            </div>
+                            <div>
+                                <p>데일리 믹스5</p>
+                                <span>DPR LIVE,Miso,Virgin Miri 등</span>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!--container-->
+                
+            </div>
+            <footer>
+                <div id="footer1">
+                    <div>
+                        <ul>
+                            <li>회사</li>
+                            <li><a href="#">상세정보</a></li>
+                            <li><a href="#">채용정보</a></li>
+                            <li><a href="#">For the Record</a></li>
+                        </ul>
+                        <ul>
+                            <li>커뮤니티</li>
+                            <li><a href="#">아티스트</a></li>
+                            <li><a href="#">개발자</a></li>
+                            <li><a href="#">투자자</a></li>
+                            <li><a href="#">공급업체</a></li>
+                        </ul>
+                        <ul>
+                            <li>유용한 링크</li>
+                            <li><a href="#">지원</a></li>
+                        </ul>
+                        <ul>
+                            <li>요금제</li>
+                            <li><a href="#">Premium 개인</a></li>
+                            <li><a href="#">Premium 듀오</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                       <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    </div>
+                </div>
+                <hr width="95%" style="margin:0 auto; opacity: 0.3;" color="gray">
+                <div id="footer2">
+                    <a href="#">법률 정보</a>
+                    <a href="#">안전 및 개인정보 보호 센터</a>
+                    <a href="#">개인정보 처리방침</a>
+                    <a href="#">접근성</a>
+                    <span>© 2024 GORI AB</span>
+                </div>
+            </footer>
+        </div>
+        <div id="toolBar">
+            <div id="toolBar-left">
+                <div id="toolBar-left-info">
+                    <a href="#"><img src="/Media/Images/Project/Album/cool_best.jpg"></a>
+                    <div>
+                        <p><a href="">해변의 여인</a></p>
+                        <p><a href="">Cool</a></p>
+                    </div>
+                </div>
+                <div id="toolBar-left-button">
+                        <button type="button" onclick=""><i class="fa-solid fa-heart"></i></button>
+                        <div></div>
+                        <button type="button" onclick=""><i class="fa-solid fa-minus"></i></button>
+                        <button type="button" onclick=""><i class="fa-solid fa-plus"></i></button>
+                </div>
+            </div>
+            <div id="toolBar-center">
+                <div id="toolBar-center-button">
+                    <button type="button" onclick=""><i class="fa-solid fa-shuffle"></i></button>
+                    <button type="button" onclick=""><i class="fa-solid fa-backward-step"></i></button>
+                    <button type="button" id="toolBar_btn_play" onclick=""><i class="fa-solid fa-circle-play" style="color:white"></i></button>
+                    <button type="button" onclick=""><i class="fa-solid fa-forward-step"></i></button>
+                    <button type="button" onclick=""><i class="fa-solid fa-repeat"></i></button>
+                </div>
+                <div id="toolBar-center-timeline">
+
+                </div>
+            </div>
+            <div id="toolBar-right">
+                <button type="button" onclick=""><i class="fa-solid fa-message"></i></button>
+                <button type="button" onclick=""><i class="fa-solid fa-square-poll-horizontal"></i></button>
+                <button type="button" onclick=""><i class="fa-solid fa-bars"></i></button>
+                <button type="button" onclick=""><i class="fa-solid fa-volume-low"></i></button>
+                <div></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var mouseover_btn_play = document.getElementsByClassName("mouseover_btn_play");
+        var btn_play = document.getElementsByClassName("btn_play");
+        for(let i=0; i<mouseover_btn_play.length; i++) {
+            mouseover_btn_play[i].addEventListener("mouseover", function() {
+                btn_play[i].style.color="white";
+                btn_play[i].style.backgroundColor="black";
+                btn_play[i].style.boxShadow="0px 10px 40px 1px black"
+                btn_play[i].style.transitionDuration="0.1s";
+            });
+            mouseover_btn_play[i].addEventListener("mouseout", function() {
+                btn_play[i].style.color="transparent";
+                btn_play[i].style.backgroundColor="transparent";
+                btn_play[i].style.boxShadow="none"
+                btn_play[i].style.transitionDuration="0.1s";
+            });
+        }  
+    </script>
+</body>
+</html>

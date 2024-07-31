@@ -1,0 +1,129 @@
+#sidebar_Left {
+    display: flex;
+    flex-direction: column;
+    position:fixed;
+    width: 343px;
+    height: 88%;
+    z-index: 5;
+}
+#sidebar-home {
+    width: 100%;
+    height: 180px;
+    margin: 8px 8px 0px;
+    background-color: #121212;
+    border-radius: 7px;
+    color:rgb(173, 173, 173);
+}
+#sidebar-home>ul {
+    height: 100%;
+}
+#sidebar-home>ul>li {
+    margin: 15px;
+}
+#sidebar-home #icon-search {
+    font-size: 23px;
+}
+#sidebar-home>ul>li:last-child p {
+    position:relative;
+}
+#search_Bar {
+    display: block;
+    position:absolute;
+    top:-12px;
+    left: 35px;
+    width: 250px;
+    height: 40px;
+    padding-left: 15px;
+    font-size: 15px;
+    border:none;
+    border-radius: 50px;
+    background-color: #383838;
+}
+#search_Bar:focus {
+    outline:2px solid rgb(204, 204, 204);
+}
+#sidebar-library {
+    width: 100%;
+    height: 80%;
+    margin: 8px;
+    background-color: #121212;
+    border-radius: 7px;
+}
+#library-top {
+    position:relative;
+    height: 150px;
+    padding: 10px 0 10px 20px;
+    font-size: 17px;
+}
+#library-top a:nth-of-type(2) {
+    position:absolute;
+    left:90%;
+}
+#library-top>button {
+    float:left;
+    width: auto;
+    height: 33px;
+    margin:20px 10px 8px 0px;
+    padding: 0px 13px;
+    font-size: 13px;
+    border:none;
+    border-radius: 30px;
+    background: #383838;
+    cursor: pointer;
+}
+#library-top>div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 50px;
+}
+#library-top>div>button {
+    background-color: #121212;
+    border:none;
+    font-size: 20px;
+}
+#library-top>div>button:last-child {
+    margin-right: 20px;
+}
+#library-list {
+    height: 680px; 
+}
+#library-list>a>div {
+    position:relative;
+    width: 95%;
+    height: 65px;
+    margin:10px 0 0 10px;
+    background: #121212;
+    border-radius: 7px;
+}
+#library-list>a>div:hover {
+    background-color: #383838;
+}
+#library-list>a img {
+    width:55px;
+    border-radius: 5px;
+    margin:5px;
+    margin-right: 13px;
+    vertical-align: top;
+}
+#library-list>a>div>div {
+    display:flex;
+    flex-direction: column;
+    position:absolute;
+    top:11px;
+    left:75px;
+}
+#library-list>a>div>div>span:nth-of-type(1) {
+    font-size: 15px;
+    color:rgb(231, 231, 231);
+} 
+#library-list>a>div>div>span:nth-of-type(2) {
+    font-size: 13px;
+}
+#library-list>a>div>div>span:nth-of-type(2):hover {
+    color:rgb(173, 173, 173);
+}
+
+#icon-library {
+    margin-right: 10px;
+}

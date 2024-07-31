@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="sidebar-left.css">
+    <link rel="stylesheet" href="content-main.css">
+    <link rel="stylesheet" href="toolbar.css">
+    <link rel="stylesheet" href="footer.css">
+    <!--폰트-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b9007bff14.js" crossorigin="anonymous"></script>
+    <!-- #121212 #FFE495 -->
+
+    <style>
+        * {
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            font-family: "Noto Sans KR", sans-serif;
+            color: rgb(173, 173, 173);
+        }
+        html, body {
+            background-color: black;
+            width: 100%;
+            height: 100%;
+        }
+        a {
+            text-decoration: none;
+            color:rgb(231, 231, 231);
+        }
+        ul {
+            list-style-type: none;
+        }
+        button {
+            color:white;
+        }
+        button:hover {
+        }
+        #wrapper {
+            display: grid;
+            grid-template-columns: 350px auto;
+            grid-template-rows: auto 85px;
+            width: 100%;
+        }
+        #sidebar_Left {
+           grid-column: 1/2;
+           grid-row:1/2;
+        }
+        #content-main {
+            grid-column: 2/3;
+            grid-row: 1/2;
+        }
+        #toolbar {
+            grid-column: 1/3;
+            grid-row:2/3
+        }
+        .icon {
+            margin-right:20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="sidebar_Left">
+            <div id="sidebar-home">
+                <ul>
+                    <li>
+                        <a href="#"><img src="/Media/Images/Project/GORI-home.png" width="200px"></img></a>
+                    </li>
+
+                </ul>
+            </div>
+            <div id="sidebar-library">
+                <div id="library-top">
+                    <a href="#"><i id="icon-library" class="icon fa-solid fa-list"></i>내 라이브러리</a>
+                    <a href="#"><i class="fa-solid fa-plus"></i></a><br>
+                    <button id="btn-playlist" onclick="">플레이리스트</button>
+                    <button id="btn-artist" onclick="">아티스트</button>
+                    <button id="btn-album" onclick="">앨범</button>
+                    <button id="btn-like" onclick=""></button>
+                    <br><br>
+                    <div>
+                        <button id="btn-libSearch" onclick=""><i class="fa-solid fa-magnifying-glass"></i></button>
+                        <button id="btn-sort" onclick=""><i class="fa-solid fa-arrow-down-wide-short"></i></button>
+                    </div>
+                </div>
+                <div id="library-list">
+                    <a href="#" class="playlist">
+                        <div>
+                            <img src="/Media/Images/4.jpg">
+                            <div>
+                                <span>플레이리스트 1</span>
+                                <span>플레이리스트</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="album">
+                        <div>
+                            <img src="/Media/Images/Project/Album1.jpg">
+                            <div>
+                                <span>Cool Best</span>
+                                <span>앨범</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="artist">
+                        <div>
+                            <img src="/Media/Images/3.jpg">
+                            <div>
+                                <span>NewJeans</span>
+                                <span>아티스트</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="playlist">
+                        <div>
+                            <img src="/Media/Images/2.jpg">
+                            <div>
+                                <span>플레이리스트 2</span>
+                                <span>플레이리스트</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="content-main">
+            <div id="content-main-header">
+                <div>
+                    <button type="button" class="content-main-header-angle" onclick="">&lang;</button>
+                    <button type="button" class="content-main-header-angle" onclick="">&rang;</button>
+                    <button type="button" class="content-main-header-menu" onclick="">음악</button>
+                    <button type="button" class="content-main-header-menu" onclick="">라디오</button>
+                    <button type="button" class="content-main-header-menu" onclick="">커뮤니티</button>
+                </div>
+                <div>
+                    <button type="button" onclick="">가입하기</button>
+                    <button type="button" onclick="location.href='Login.html'">로그인하기</button>
+                </div>
+            </div>
+            <div id="content-main-content">
+                <div>
+                   
+                </div>
+                <div>
+                    <div>title1</div>
+                    <div>
+                        <div>a</div>
+                        <div>b</div>
+                        <div>c</div>
+                        <div>d</div>
+                        <div>e</div>
+                        <div>f</div>
+                    </div>
+                </div>
+                <div>
+                    <div>title2</div>
+                    <div>
+                        <div>a</div>
+                        <div>b</div>
+                        <div>c</div>
+                        <div>d</div>
+                        <div>e</div>
+                        <div>f</div>
+                    </div>
+                </div>
+                <div>
+                    <div>title3</div>
+                    <div>
+                        <div>a</div>
+                        <div>b</div>
+                        <div>c</div>
+                        <div>d</div>
+                        <div>e</div>
+                        <div>f</div>
+                    </div>
+                </div>
+                <div>
+                    <div>title4</div>
+                    <div>
+                        <div>a</div>
+                        <div>b</div>
+                        <div>c</div>
+                        <div>d</div>
+                        <div>e</div>
+                        <div>f</div>
+                    </div>
+                </div>
+
+            </div>
+            <footer>
+                <div id="main-footer1">
+                    <div>
+                        <ul>
+                            <li>회사</li>
+                            <li>상세정보</li>
+                            <li>채용정보</li>
+                            <li>For the Record</li>
+                        </ul>
+                        <ul>
+                            <li>커뮤니티</li>
+                            <li>아티스트</li>
+                            <li>개발자</li>
+                            <li>투자자</li>
+                            <li>공급업체</li>
+                        </ul>
+                        <ul>
+                            <li>유용한 링크</li>
+                            <li>지원</li>
+                        </ul>
+                        <ul>
+                            <li>요금제</li>
+                            <li>Premium 개인</li>
+                            <li>Premium 듀오</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <button><img src=""></button>
+                        <button><img src=""></button>
+                        <button><img src=""></button>
+                    </div>
+                </div>
+                <hr width="95%" style="margin:0 auto; opacity: 0.3;" color="gray">
+                <div id="main-footer2">
+                    <a href="#">법률 정보</a>
+                    <a href="#">안전 및 개인정보 보호 센터</a>
+                    <a href="#">개인정보 처리방침</a>
+                    <a href="#">접근성</a>
+                    <span>© 2024 GORI AB</span>
+                </div>
+            </footer>
+        </div>
+        <div id="toolbar">ToolBar</div>
+    </div>
+</body>
+</html>
